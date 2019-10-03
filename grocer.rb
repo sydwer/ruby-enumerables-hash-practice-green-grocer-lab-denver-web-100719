@@ -42,10 +42,9 @@ def apply_clearance(cart)
    middleman_cart = consolidate_cart(cart)
    apply_coupons(middleman_cart, coupons)
    apply_clearance(middleman_cart)
-
-total = 0
-  middleman_cart.each do |items, their_info|
-    total += (their_info[:price] * their_info[:count])
+   total = 0
+   middleman_cart.each do |items, their_info|
+   total += (their_info[:price] * their_info[:count])
   end
   if total >= 100
     total *= 0.9
