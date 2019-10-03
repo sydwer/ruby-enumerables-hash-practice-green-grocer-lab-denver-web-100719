@@ -47,7 +47,7 @@ def apply_clearance(cart)
    total += (their_info[:price] * their_info[:count])
   end
   if total >= 100
-    total * 0.9
+    total *= 0.9
   end
   return total
 end
